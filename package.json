@@ -6,6 +6,7 @@
   "repository": "https://github.com/vincent-tr/mylife-home-core-plugins-hw-absoluta",
   "author": "Vincent Trumpff",
   "dependencies": {
+    "imap": "^0.8.19",
     "log4js": "*"
   },
   "devDependencies": {
