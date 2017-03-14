@@ -1,0 +1,19 @@
+{
+  "name": "mylife-home-core-plugins-hw-absoluta",
+  "version": "0.0.1",
+  "description": "Mylife Home Core Plugin: HW Absoluta",
+  "main": "index.js",
+  "repository": "https://github.com/vincent-tr/mylife-home-core-plugins-hw-absoluta",
+  "author": "Vincent Trumpff",
+  "dependencies": {
+    "log4js": "*"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "jshint": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.js"
+  }
+}
