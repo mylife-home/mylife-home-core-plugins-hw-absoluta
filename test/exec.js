@@ -1,6 +1,6 @@
 'use strict';
 
-const { Connection } = require('../lib/service/');
+const { Connection, Database } = require('../lib/service/');
 
 const con = new Connection({
   user     : process.argv[2],
@@ -10,6 +10,15 @@ const con = new Connection({
   tls      : true
 });
 
-con.on('error', (err) => console.error(err));
+const db = new Database();
+let bulkLevel = 0;
 
-con.on('message', (msg) => console.log(msg));
+con.on('error', console.error);
+con.on('fetchBegin', () => db.beginBulk());
+con.on('fetchEnd', () => db.endBulk());
+
+con.on('message', (msg) => {
+  db.addMessage(msg.bodies.TEXT);
+});
+
+db.on('activeChanged', console.log);
