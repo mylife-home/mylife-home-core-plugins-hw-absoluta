@@ -11,9 +11,7 @@ const con = new Connection({
 });
 
 const db = new Database();
-let bulkLevel = 0;
 
-con.on('error', console.error);
 con.on('fetchBegin', () => db.beginBulk());
 con.on('fetchEnd', () => db.endBulk());
 
