@@ -7,7 +7,8 @@
   "author": "Vincent Trumpff",
   "dependencies": {
     "imap": "vincent-tr/node-imap",
-    "log4js": "*"
+    "log4js": "*",
+    "read-all-stream": "^3.1.0"
   },
   "devDependencies": {
     "chai": "*",

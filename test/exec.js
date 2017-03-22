@@ -11,3 +11,5 @@ const con = new Connection({
 });
 
 con.on('error', (err) => console.error(err));
+
+con.on('message', (msg) => console.log(msg));
