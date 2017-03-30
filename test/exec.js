@@ -16,7 +16,7 @@ con.on('fetchBegin', () => db.beginBulk());
 con.on('fetchEnd', () => db.endBulk());
 
 con.on('message', (msg) => {
-  db.addMessage(msg.bodies.TEXT);
+  db.addMessage(msg.bodies.TEXT, msg.attributes.uid);
 });
 
 db.on('activeChanged', console.log);
