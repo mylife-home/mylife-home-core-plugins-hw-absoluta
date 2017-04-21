@@ -2,6 +2,11 @@
 
 const { Connection, Database } = require('../lib/service/');
 
+process.on('uncaughtException', err => {
+  console.trace(err);
+  process.exit(1);
+});
+
 const con = new Connection({
   user     : process.argv[2],
   password : process.argv[3],
@@ -20,3 +25,5 @@ con.on('message', (msg) => {
 });
 
 db.on('activeChanged', console.log);
+
+con.on('error', () => {});
