@@ -7,7 +7,7 @@
   "author": "Vincent Trumpff",
   "dependencies": {
     "imap": "vincent-tr/node-imap",
-    "inbox": "^1.1.59",
+    "inbox": "vincent-tr/inbox",
     "libqp": "^1.1.0",
     "log4js": "*",
     "moment": "^2.18.1",
