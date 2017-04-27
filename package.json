@@ -6,7 +6,7 @@
   "repository": "https://github.com/vincent-tr/mylife-home-core-plugins-hw-absoluta",
   "author": "Vincent Trumpff",
   "dependencies": {
-    "imap": "vincent-tr/node-imap",
+    "imap": "^0.8.19",
     "libqp": "^1.1.0",
     "log4js": "*",
     "moment": "^2.18.1",
